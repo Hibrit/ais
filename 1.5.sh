@@ -11,7 +11,8 @@ echo 'filesystem table created'
 echo
 sleep 3
 
-#! clone this repo inside /mnt/root
+#? clone this repo inside /mnt/root
+git clone https://github.com/Hibrit/arch_install_scripts.git /mnt/
 
 #* chroot
 arch-chroot /mnt

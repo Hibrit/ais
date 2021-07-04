@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#? setting time
+#* setting time
 ln -sf /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
 hwclock --systohc
 
@@ -14,8 +14,8 @@ echo root:123 | chpasswd
 
 #! create a user and set its wheel permissions
 
-pacman -S --needed --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-headers xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol bash-completion openssh rsync reflector acpi acpi_call ipset firewalld sof-firmware nss-mdns acpid os-prober ntfs-3g terminus-font
-# nvidia nvidia-utils nvidia-settings avahi virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat iptables-nft bluez bluez-utils cups tlp 
+pacman -S --needed --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-headers xdg-user-dirs xdg-utils bash-completion openssh reflector firewalld os-prober 
+# nvidia nvidia-utils nvidia-settings avahi virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat iptables-nft bluez bluez-utils cups tlp gvfs gvfs-smb nfs-utils inetutils dnsutils hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol sof-firmware nss-mdns acpid terminus-font rsync acpi acpi_call ipset ntfs-3g 
 
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 
