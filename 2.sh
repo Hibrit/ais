@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #* installing the essential packages
-pacstrap /mnt base linux linux-firmware git vim 
+pacstrap /mnt base linux linux-firmware git vim wget
 # intel-ucode
 
 #* generating fstab
