@@ -12,7 +12,7 @@ echo
 sleep 3
 
 #? clone this repo inside /mnt/root
-git clone https://github.com/Hibrit/arch_install_scripts.git /mnt/
+git clone https://github.com/Hibrit/arch_install_scripts.git /mnt/arch_install_scripts
 
 #* chroot
 arch-chroot /mnt
