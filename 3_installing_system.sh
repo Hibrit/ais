@@ -38,6 +38,7 @@ sleep 3
 EDITOR=vim visudo
 mkdir /home/${USER_NAME}/Documents
 cp -r /ais /home/${USER_NAME}/Documents/ais
+chown -R ${USER_NAME}:${USER_NAME} /home/${USER_NAME}/Documents
 echo
 echo 'please exit this tty session and proceed with scripts'
 echo
