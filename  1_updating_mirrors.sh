@@ -1,12 +1,15 @@
 #!/bin/bash
 
-#? clear screen
+#* clear screen
 clear
 
-#? making sure mirrors are refreshed
+#? setting time
+timedatectl set-ntp true
+
+#* making sure mirrors are refreshed
 pacman -Syy
 
-#? updating mirrors
+#* updating mirrors
 pacman -S --noconfirm reflector
 reflector -c Turkey -a 12 --sort rate --save /etc/pacman.d/mirrorlist
 

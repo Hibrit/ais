@@ -26,16 +26,17 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
 
-#? adding user
+#* adding user
 useradd -mG wheel ${USER_NAME}
 echo ${USER_NAME}:${USER_PASSWORD} | chpasswd
 
-#? informing about suders file and going into edit mode
+#* informing about suders file and going into edit mode
 echo
 echo 'please uncomment the relevant wheel line from sudoers file'
 echo
 sleep 3
 EDITOR=vim visudo
+cp -r /ais /home/${USER_NAME}/Documents/ais
 echo
 echo 'please exit this tty session and proceed with scripts'
 echo
