@@ -12,6 +12,7 @@ pacman -Syy
 #* updating mirrors
 pacman -S --noconfirm reflector
 reflector -c Turkey -a 12 --sort rate --save /etc/pacman.d/mirrorlist
+pasman -Syy
 
 echo
 echo
