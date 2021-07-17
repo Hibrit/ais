@@ -36,6 +36,7 @@ echo 'please uncomment the relevant wheel line from sudoers file'
 echo
 sleep 3
 EDITOR=vim visudo
+mkdir /home/${USER_NAME}/Documents
 cp -r /ais /home/${USER_NAME}/Documents/ais
 echo
 echo 'please exit this tty session and proceed with scripts'
