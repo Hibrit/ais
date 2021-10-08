@@ -18,6 +18,11 @@ echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 ${MACHINE_NAME}.localdomain ${MACHINE_NAME}" >> /etc/hosts
 echo root:${ROOT_PASSWORD} | chpasswd
 
+# set up the pacman configuration
+rm /etc/pacman.conf
+wget --directory-prefix /etc/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/pacman/pacman.conf
+pacman -Syy
+
 pacman -S --needed --noconfirm grub grub-btrfs efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base-devel linux-headers reflector openssh xdg-user-dirs tldr
 
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub

@@ -6,7 +6,7 @@ clear
 #* setting time
 timedatectl set-ntp true
 
-#? set the proper pacman configuration
+#* set the proper pacman configuration
 rm /etc/pacman.conf
 wget --directory-prefix /etc/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/pacman/pacman.conf
 pacman -Syy
