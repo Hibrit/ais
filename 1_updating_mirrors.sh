@@ -3,19 +3,13 @@
 #* clear screen
 clear
 
-#? setting time
+#* setting time
 timedatectl set-ntp true
 
-#* making sure mirrors are refreshed
+#? set the proper pacman configuration
+rm /etc/pacman.conf
+wget --direcotry-prefix /etc/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/pacman/pacman.conf
 pacman -Syy
-
-#* updating mirrors
-pacman -S --noconfirm reflector
-reflector -c Turkey -a 12 --sort rate --save /etc/pacman.d/mirrorlist
-pasman -Syy
-
-echo
-echo
 
 #* listing partitions
 lsblk
