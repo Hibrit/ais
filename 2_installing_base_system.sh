@@ -2,7 +2,7 @@
 
 #* installing the essential packages
 pacstrap /mnt base linux linux-firmware git vim wget
-# intel-ucode
+# intel-ucode amd-ucode
 
 #* generating fstab
 genfstab -U /mnt >> /mnt/etc/fstab
