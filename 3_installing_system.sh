@@ -23,6 +23,8 @@ rm /etc/pacman.conf
 wget --directory-prefix /etc/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/pacman/pacman.conf
 pacman -Syy
 
+/ais/install_yay.sh
+
 pacman -S --needed --noconfirm grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog mtools dosfstools base-devel linux-headers reflector openssh xdg-user-dirs tldr
 # os-prober ntfs-3g
 
