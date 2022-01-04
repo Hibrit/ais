@@ -4,6 +4,8 @@
 # Date Created: 20/09/2020
 # Date Modified: 06/02/2021
 
+#! OUTDATED
+
 echo 'Script has started'
 echo
 

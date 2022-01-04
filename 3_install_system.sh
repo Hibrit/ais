@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#* clear screen
+clear
+
+#* variables that should be edited
 MACHINE_NAME='machinename'
 ROOT_PASSWORD='password'
 USER_NAME='username'
@@ -9,6 +13,7 @@ USER_PASSWORD='password'
 ln -sf /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
 hwclock --systohc
 
+#* generating locales and setting up the host information
 echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
@@ -18,16 +23,15 @@ echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 ${MACHINE_NAME}.localdomain ${MACHINE_NAME}" >> /etc/hosts
 echo root:${ROOT_PASSWORD} | chpasswd
 
-#? set up the pacman configuration
+#* set up the pacman configuration
 rm /etc/pacman.conf
 wget --directory-prefix /etc/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/pacman/pacman.conf
 pacman -Syy
 
-/ais/install_yay.sh
+#* installing essential packages
+pacman -S --needed --noconfirm grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog mtools dosfstools base-devel linux-headers reflector openssh xdg-user-dirs tldr #os-prober ntfs-3g
 
-pacman -S --needed --noconfirm grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog mtools dosfstools base-devel linux-headers reflector openssh xdg-user-dirs tldr
-# os-prober ntfs-3g
-
+#! install grub !!!THIS IS FOR UEFI USAGE ONLY!!!
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 
 grub-mkconfig -o /boot/grub/grub.cfg

@@ -1,8 +1,10 @@
 #!/bin/bash
 
+#* clear screen
+clear
+
 #* installing the essential packages
-pacstrap /mnt base linux linux-firmware git vim wget
-# intel-ucode amd-ucode
+pacstrap /mnt base linux linux-firmware git vim wget #intel-ucode amd-ucode
 
 #* generating fstab
 genfstab -U /mnt >> /mnt/etc/fstab

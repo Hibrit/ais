@@ -1,8 +1,7 @@
 #!/bin/bash
-# Author: hibrit
-# Purpose: installing yay
-# Date Created: 17/07/2021
-# Date Modified: 17/07/2021
+
+#* clear screen
+clear
 
 echo 'Installing yay'
 
