@@ -6,7 +6,7 @@ yay -Sy --needed --noconfirm visual-studio-code-bin
 
 
 #* open and close visual studio code once
-code /home/${USER_NAME}/
+code /home/$USER/
 sleep 3
 killall code
 while pgrep -u $UID -x code >/dev/null; do sleep 1; done
@@ -32,5 +32,5 @@ code --install-extension PKief.material-icon-theme
 
 
 #* set custom keybindings and settings
-wget --directory-prefix /home/${USER_NAME}/.config/Code/User/ https://github.com/Hibrit/archlinuxsettings/raw/master/vscode/keybindings.json
-wget --directory-prefix /home/${USER_NAME}/.config/Code/User/ https://github.com/Hibrit/archlinuxsettings/raw/master/vscode/settings.json
+wget --directory-prefix /home/$USER/.config/Code/User/ https://github.com/Hibrit/archlinuxsettings/raw/master/vscode/keybindings.json
+wget --directory-prefix /home/$USER/.config/Code/User/ https://github.com/Hibrit/archlinuxsettings/raw/master/vscode/settings.json
