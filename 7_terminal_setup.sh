@@ -36,15 +36,15 @@ yay -Sy --needed --noconfirm zsh-theme-powerlevel10k-git
 
 #* zsh
 echo 'Making zsh config'
-rm /home/$USER_NAME/.zshrc
-wget --directory-prefix /home/$USER_NAME/ https://github.com/Hibrit/archlinuxsettings/raw/master/zsh/.zshrc
+rm /home/$USER/.zshrc
+wget --directory-prefix /home/$USER/ https://github.com/Hibrit/archlinuxsettings/raw/master/zsh/.zshrc
 
 
 #* alacritty
 echo 'Making alacritty config'
-rm -rf /home/$USER_NAME/.config/alacritty
-mkdir /home/$USER_NAME/.config/alacritty
-wget --directory-prefix /home/$USER_NAME/.config/alacritty/ https://github.com/Hibrit/archlinuxsettings/raw/master/alacritty/alacritty.yml
+rm -rf /home/$USER/.config/alacritty
+mkdir /home/$USER/.config/alacritty
+wget --directory-prefix /home/$USER/.config/alacritty/ https://github.com/Hibrit/archlinuxsettings/raw/master/alacritty/alacritty.yml
 
 
 echo
