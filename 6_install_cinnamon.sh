@@ -4,8 +4,8 @@
 clear
 
 #* install needed packages
-sudo pacman -Sy --needed --noconfirm xorg lightdm lightdm-webkit2-greeter lightdm-webkit-theme-litarvan numlockx cinnamon alacritty papirus-icon-theme ttf-input ttf-ubuntu-font-family ttf-fira-code mlocate neofetch htop
-yay -Sy --needed --noconfirm mint-themes papirus-folders bibata-cursor-theme-bin nerd-fonts-meslo google-chrome brave-bin
+sudo pacman -Sy --needed --noconfirm xorg lightdm lightdm-webkit2-greeter lightdm-webkit-theme-litarvan numlockx cinnamon alacritty papirus-icon-theme ttf-input ttf-ubuntu-font-family ttf-fira-code mlocate neofetch htop gnome-keyring mpv youtube-dl eog mupdf
+yay -Sy --needed --noconfirm mint-themes papirus-folders bibata-cursor-theme-bin nerd-fonts-meslo google-chrome brave-bin mailspring
 
 #* change papirus folders color theme to yaru
 papirus-folders -C yaru -t Papirus-Dark
