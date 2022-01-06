@@ -42,7 +42,11 @@ wget --directory-prefix /home/$USER/ https://github.com/Hibrit/archlinuxsettings
 
 #* alacritty
 echo 'Making alacritty config'
-rm -rf /home/$USER/.config/alacritty
+
+if [ -d "/home/$USER/.config/alacritty" ]; then
+    rm -rf /home/$USER/.config/alacritty
+fi
+
 mkdir /home/$USER/.config/alacritty
 wget --directory-prefix /home/$USER/.config/alacritty/ https://github.com/Hibrit/archlinuxsettings/raw/master/alacritty/alacritty.yml
 
