@@ -13,7 +13,7 @@ echo
 #* essentials
 echo 'Installing some essential packages through yay and pacman'
 sudo pacman -Sy --needed --noconfirm zsh fzf thefuck
-yay -Sy --needed --noconfirm ruby-colorls
+yay -Sy --needed --noconfirm ruby-colorls ookla-speedtest-bin
 
 
 #* oh my zsh
