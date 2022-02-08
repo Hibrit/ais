@@ -10,6 +10,13 @@ yay -Sy --needed --noconfirm mint-themes papirus-folders bibata-cursor-theme-bin
 #* change papirus folders color theme to yaru
 papirus-folders -C yaru -t Papirus-Dark
 
+#* replace ~/.vimrc with the proper one
+if [ -f "~/.vimrc" ]; then
+    rm ~/.vimrc && wget --directory-prefix ~/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/vim/.vimrc
+else
+    wget --directory-prefix ~/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/vim/.vimrc
+fi
+
 #* replace lightdm config with the proper one
 sudo rm /etc/lightdm/lightdm.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo wget --directory-prefix /etc/lightdm/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/lightdm/lightdm.conf
