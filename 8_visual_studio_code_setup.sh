@@ -20,7 +20,6 @@ code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
-code --install-extension GitHub.copilot
 code --install-extension jdinhlife.gruvbox
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
