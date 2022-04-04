@@ -14,7 +14,7 @@ sudo pacman -Sy qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-
 sudo sed -e '/unix_sock_group/s/^#//' -e '/unix_sock_rw_perms/s/^#//' -i /etc/libvirt/libvirtd.conf
 
 #? configure qemu in case of permission problems
-sudo sed -e "/#user = \".*\"/s/^#//" -e "/user = \".*\"/s/\".*\"/\"$USER\"/" -e "/#group = \".*\"/s/^#//" -e '/group = ".*"/s/".*"/"libvirt"/' /etc/libvirt/qemu.conf
+sudo sed -e "/#user = \".*\"/s/^#//" -e "/user = \".*\"/s/\".*\"/\"$USER\"/" -e "/#group = \".*\"/s/^#//" -e '/group = ".*"/s/".*"/"libvirt"/' -i /etc/libvirt/qemu.conf
 
 #? add user to group
 #! really have no idea if this works
