@@ -14,6 +14,8 @@ ln -sf /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
 hwclock --systohc
 
 #* generating locales and setting up the host information
+#? use sed to uncomment line instead of appending a new one
+#sed '/en_US.UTF-8/s/^#//' -i /etc/locale.gen
 echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
