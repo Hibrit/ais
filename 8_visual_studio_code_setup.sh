@@ -1,6 +1,9 @@
 #!/bin/bash
 
 
+#* clear screen
+clear
+
 #* install visual studio code
 yay -Sy --needed --noconfirm visual-studio-code-bin
 
