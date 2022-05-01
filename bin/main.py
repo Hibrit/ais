@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+from tui import TUI
 
+tui = TUI()
+tui.run()
 #! we can still use dialog instead of curses through a connector api
 #! see pythondialog on pypi
 
