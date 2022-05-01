@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#! after next login depending a pop up will appear 
+#! a notification asking to install vs code if wanted this script will run
 
 #* clear screen
 clear

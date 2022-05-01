@@ -3,6 +3,7 @@
 #* clear screen
 clear
 
+#! maybe here we can decide which ucode to install based on system info somehow
 #* installing the essential packages
 pacstrap /mnt base linux linux-firmware git vim wget #intel-ucode amd-ucode
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#! this will run after an interactive choice asking if we want to setup a server
+
 #* clear screen
 clear
 
