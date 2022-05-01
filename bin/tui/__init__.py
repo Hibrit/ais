@@ -32,7 +32,7 @@ class TUI:
 
     def default_page(self):
         self.dialog.msgbox(
-            'TUI system ready to use you only have to inherit this class create an instance than edit and use update method')
+            'TUI system ready to use you only have to inherit DriverPage class create an instance than edit and use update method')
 
     def update(self):
         self.default_page()

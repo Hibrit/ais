@@ -1,7 +1,8 @@
-from tui import TUI
+from .driver_page import DriverPage
+from .partitioning_page import PartitioningPage
 
 
-class MainPage(TUI):
+class MainPage(DriverPage):
     def __init__(self):
         super().__init__(title='Main Page')
 
@@ -11,4 +12,10 @@ class MainPage(TUI):
                                               ('(q)', 'quit')])
 
         if code == self.dialog.OK:
-            print(tag)
+            # ? if tag q quit immidiately
+            if tag.lower() == '(q)':
+                exit()
+            elif tag == '(0)':
+                p = PartitioningPage()
+                p.update()
+            #! if tag 0 than go to partitioning_page
