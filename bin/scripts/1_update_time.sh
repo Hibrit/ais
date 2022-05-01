@@ -1,5 +1,10 @@
 #!/bin/bash
-source './global.sh'
+
+PATH=$(dirname -- "$(readlink -f "${BASH_SOURCE}")")
+echo $PATH
+
+source "$PATH/global.sh"
+
 
 #? setting time
 log_start 'SET TIME'

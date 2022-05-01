@@ -1,6 +1,10 @@
 #!/bin/bash
 
-source ./global.sh
+PATH=$(dirname -- "$(readlink -f "${BASH_SOURCE}")")
+echo $PATH
+
+source "$PATH/global.sh"
+
 
 #* check for wget first
 log_start 'WGET'
