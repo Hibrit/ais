@@ -9,8 +9,8 @@ PATH = dirname(realpath(__file__))
 # TODO these scripts are a bit of a hassle for every startup these are slowing the execution
 #! probably create a lock file and track time in there
 #! if executed in the near past don't execute it again
-# for script in ['1_update_time.sh', '2_update_mirrors.sh', '3_check_dialog.sh']:
-#     call([join(PATH, 'scripts', script)])
+for script in ['1_update_time.sh', '2_update_mirrors.sh', '3_check_dialog.sh']:
+    call([join(PATH, 'scripts', script)])
 
 try:
     from dialog import Dialog
