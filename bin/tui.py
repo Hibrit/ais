@@ -12,8 +12,8 @@ PATH = dirname(realpath(__file__))
 print(PATH)
 for script in ['1_update_time.sh', '2_update_mirrors.sh', '3_check_dialog.sh']:
     print(script)
-    # call(join(PATH, 'scripts', script))
-    print(join(PATH, 'scripts', script))
+    call([join(PATH, 'scripts', script)])
+    # print(join(PATH, 'scripts', script))
 
 # call(join(PATH, 'scripts', '1_update_time.sh'))
 # call(join(PATH, 'scripts', '2_update_mirrors.sh'))
