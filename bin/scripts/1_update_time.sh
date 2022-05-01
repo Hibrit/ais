@@ -8,4 +8,4 @@ source "$PATH/global.sh"
 
 #? setting time
 log_start 'SET TIME'
-timedatectl set-ntp true &> /dev/null
+/usr/bin/timedatectl set-ntp true &> /dev/null

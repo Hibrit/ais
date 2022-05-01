@@ -14,6 +14,8 @@ log_start 'WGET'
 log_start 'PACMAN CONFIG'
 /usr/bin/rm /etc/pacman.conf 1>> /var/log/ais.out 2>> /var/log/ais.err
 
-wget --directory-prefix /etc/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/pacman/pacman.conf 1>> /var/log/ais.out 2>> /var/log/ais.err
 
-pacman -Syy 1>> /var/log/ais.out 2>> /var/log/ais.err
+#? before this we need to install wget
+/usr/bin/wget --directory-prefix /etc/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/pacman/pacman.conf 1>> /var/log/ais.out 2>> /var/log/ais.err
+
+/usr/bin/pacman -Syy 1>> /var/log/ais.out 2>> /var/log/ais.err
