@@ -10,6 +10,9 @@
 #! at the end of the process give user to opportunity to save their installation for sharing!
 #! remember we have a system that we can share our installations with it
 
+
+#! at the very end we can try to create our own iso of arch linux with this installation process
+
 # import subprocess
 
 

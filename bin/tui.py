@@ -13,5 +13,3 @@ except ModuleNotFoundError:
         call(f'{executable} -m pip install pythondialog'.split())
 
     from dialog import Dialog
-
-#! use pythondialog
