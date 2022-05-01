@@ -11,14 +11,21 @@ class PartitioningPage(DriverPage):
         # TODO first inform user with their current disk scheme
         #!get information with lsblk
         process = Popen(
-            'lsblk --output label,name,size,type,mountpoints | grep -e "loop"'.split(), stdout=PIPE, stderr=PIPE)
+            'lsblk --output label,name,size,type,mountpoints'.split(), stdout=PIPE, stderr=PIPE)
         out, err = process.communicate()
 
-        # self.dialog.msgbox(out.decode(encoding='utf-8'))
+        message = ''
+        black_list = ['archiso']
+
+        for i in out.decode('utf-8').split('\n'):
+            if not i in black_list:
+                message += i
+
+        self.dialog.msgbox(message)
         # self.dialog.msgbox('congrats you are using a custom new page')
 
-        info_page = InfoPage(message=out.decode('utf-8'))
-        info_page.update()
+        # info_page = InfoPage(message=out.decode('utf-8'))
+        # info_page.update()
 
         #! second select which disk to use
         #! give user the options manual or automatic
