@@ -7,8 +7,8 @@ PATH = dirname(realpath(__file__))
 
 # * before doin' anything run this 3 scripts at first for set up
 # ! these scripts are a bit of a hassle for every startup these are slowing the execution
-for script in ['1_update_time.sh', '2_update_mirrors.sh', '3_check_dialog.sh']:
-    call([join(PATH, 'scripts', script)])
+# for script in ['1_update_time.sh', '2_update_mirrors.sh', '3_check_dialog.sh']:
+#     call([join(PATH, 'scripts', script)])
 
 try:
     from dialog import Dialog
@@ -26,9 +26,9 @@ locale.setlocale(locale.LC_ALL, '')
 
 
 class TUI:
-    def __init__(self):
+    def __init__(self, title='my_tui'):
         self.dialog = Dialog(dialog='dialog')
-        self.dialog.set_background_title('my_tui')
+        self.dialog.set_background_title(title)
 
     def default_page(self):
         self.dialog.msgbox(
