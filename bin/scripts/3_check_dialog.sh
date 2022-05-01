@@ -10,4 +10,5 @@ if [ -f '/usr/bin/dialog' ]; then
     echo 'dialog exists'
 else
     echo 'dialog does not exist'
+    pacman -Sy --noconfirm --needed dialog
 fi
