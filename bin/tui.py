@@ -10,8 +10,7 @@ except ModuleNotFoundError:
         check_call(f'{executable} -m pip install pythondialog'.split())
     except CalledProcessError:
         call('pacman -Sy --noconfirm --needed  python-pip'.split())
-
-    call(f'{executable} -m pip install pythondialog'.split())
+        call(f'{executable} -m pip install pythondialog'.split())
 
     from dialog import Dialog
 
