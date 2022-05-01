@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from pages.main_page import MainPage
-from tui import TUI
+
 # // we can still use dialog instead of curses through a connector api
 # // see pythondialog on pypi
 # * decided to ,using pythondoialog through dialog package, create my own connector class
