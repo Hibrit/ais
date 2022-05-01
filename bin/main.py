@@ -3,7 +3,7 @@
 #! we can still use dialog instead of curses through a connector api
 #! see pythondialog on pypi
 
-#! we will run commands in background and track their stdouts stdinps in order to control them (Threading)
+#! we will run commands in background and track their stdouts stdins in order to control them (Threading)
 
 #! remember to track error logs to a proper file
 
