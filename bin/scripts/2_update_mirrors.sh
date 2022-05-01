@@ -2,11 +2,11 @@
 
 source ./global.sh
 
-#? check for wget first
+#* check for wget first
 log_start 'WGET'
 sudo pacman -Sy --noconfirm --needed wget 1>> /var/log/ais.out 2>> /var/log/ais.err
 
-#? set the proper pacman configuration
+#* set the proper pacman configuration
 log_start 'PACMAN CONFIG'
 rm /etc/pacman.conf 1>> /var/log/ais.out 2>> /var/log/ais.err
 
