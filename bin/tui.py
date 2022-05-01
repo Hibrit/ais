@@ -4,11 +4,11 @@
 
 #! before doing anything run script 1 and 2
 import locale
-from os.path import realpath, join
+from os.path import dirname, realpath, join
 from sys import executable
 from subprocess import call, check_call, CalledProcessError
 
-PATH = realpath(__file__)
+PATH = dirname(realpath(__file__))
 call(join(PATH, 'scripts', '1_update_time.sh'))
 call(join(PATH, 'scripts', '2_update_mirrors.sh'))
 call(join(PATH, 'scripts', '3_check_dialog.sh'))
