@@ -5,5 +5,5 @@ source "$local_path/global.sh"
 
 
 #* setting time
-log_start 'SET TIME'
+log_start 'update time'
 timedatectl set-ntp true &> /dev/null
