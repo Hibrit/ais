@@ -2,12 +2,22 @@
 
 #!!!!!!!!!!!!! THIS FILE CONTAINS EVERYTHING I NEED TO KNOW TO CREATE A TUI WITH PYTHONDIALOG
 
+#! before doing anything run script 1 and 2
+import locale
+from os.path import realpath, join
+from sys import executable
+from subprocess import call, check_call, CalledProcessError
+
+PATH = realpath(__file__)
+call(join(PATH, 'scripts', '1_update_time.sh'))
+call(join(PATH, 'scripts', '2_update_mirrors.sh'))
+call(join(PATH, 'scripts', '3_check_dialog.sh'))
+
+
 try:
     from dialog import Dialog
     print('success')
 except ModuleNotFoundError:
-    from sys import executable
-    from subprocess import call, check_call, CalledProcessError
     try:
         check_call(f'{executable} -m pip install pythondialog'.split())
     except CalledProcessError:
@@ -16,7 +26,6 @@ except ModuleNotFoundError:
 
     from dialog import Dialog
 
-import locale
 
 locale.setlocale(locale.LC_ALL, '')
 
