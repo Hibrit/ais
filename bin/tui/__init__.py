@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+# TODO check for the operating system if not compatible not go any further
 import locale
 from os.path import dirname, realpath, join
 from sys import executable
