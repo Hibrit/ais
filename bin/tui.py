@@ -2,7 +2,7 @@
 
 #!!!!!!!!!!!!! THIS FILE CONTAINS EVERYTHING I NEED TO KNOW TO CREATE A TUI WITH PYTHONDIALOG
 
-# ? before doing anything run script 1 2 and 3
+# * before doing anything run script 1 2 and 3
 import locale
 from os.path import dirname, realpath, join
 from sys import executable
