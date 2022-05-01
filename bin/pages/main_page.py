@@ -12,10 +12,10 @@ class MainPage(DriverPage):
                                               ('(q)', 'quit')])
 
         if code == self.dialog.OK:
-            # ? if tag q quit immidiately
+            # * if tag (q) quit immidiately
             if tag.lower() == '(q)':
                 exit()
             elif tag == '(0)':
+                # * if tag (0) than go to partitioning_page
                 p = PartitioningPage()
                 p.update()
-            #! if tag 0 than go to partitioning_page

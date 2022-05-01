@@ -25,13 +25,24 @@ class PartitioningPage(DriverPage):
                 message += i
                 message += '\n'
 
-        self.dialog.msgbox(message)
+        info_page = InfoPage(message=message[:-1])
+        info_page.update()
+
+        #! ask for which disk to partition
+        #! use radiolist here !!!!!!!!
+        # code, tag = self.dialog.radiolist('Do you want to partition the disk manually ?',
+        #                                   choices=[('ch1', False),
+        #                                            ('ch2', True)])
+        # if code == self.dialog.OK:
+        #     print(tag)
+
+        #! partition the disk accordingly
+
         # self.dialog.msgbox('congrats you are using a custom new page')
 
         # info_page = InfoPage(message=out.decode('utf-8'))
         # info_page.update()
 
-        #! second select which disk to use
         #! give user the options manual or automatic
         #! to manuel partitioning use cfdisk
         #! to automated partitioning use bash scripting more and more
