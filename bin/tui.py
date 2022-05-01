@@ -9,6 +9,7 @@ from sys import executable
 from subprocess import call, check_call, CalledProcessError
 
 PATH = dirname(realpath(__file__))
+print(PATH)
 for script in ['1_update_time.sh', '2_update_mirrors.sh', '3_check_dialog.sh']:
     print(script)
     call(join(PATH, 'scripts', script))
