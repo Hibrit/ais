@@ -24,14 +24,15 @@ class PartitioningPage(DriverPage):
             else:
                 message += i
                 message += '\n'
+
         message = message[:-1]
         info_page = InfoPage(message=message)
         info_page.update()
 
         #! ask for which disk to partition
 
-        info_page = InfoPage(message=f'{message}')
-        info_page.update()
+        # info_page = InfoPage(message=f'{message.split("\n")[1]}')
+        # info_page.update()
 
         #! use radiolist here !!!!!!!!
         # code, tag = self.dialog.radiolist('Do you want to partition the disk manually ?',
