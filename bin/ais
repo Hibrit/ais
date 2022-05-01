@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 from tui import TUI
 
+# // we can still use dialog instead of curses through a connector api
+# // see pythondialog on pypi
+# * decided to ,using pythondoialog through dialog package, create my own connector class
 tui = TUI()
 tui.run()
-#! we can still use dialog instead of curses through a connector api
-#! see pythondialog on pypi
 
 #! we will run commands in background and track their stdouts stdins in order to control them (Threading)
 
