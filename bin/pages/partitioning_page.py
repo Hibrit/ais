@@ -1,4 +1,5 @@
 from .driver_page import DriverPage
+from subprocess import Popen, PIPE
 
 
 class PartitioningPage(DriverPage):
@@ -8,7 +9,12 @@ class PartitioningPage(DriverPage):
     def update(self):
         # TODO first inform user with their current disk scheme
         #!get information with lsblk
-        self.dialog.msgbox('congrats you are using a custom new page')
+        process = Popen(['ls', '-a'], stdout=PIPE, stderr=PIPE)
+        out, err = process.communicate()
+        print(out)
+
+        self.dialog.msgbox(out.decode(encoding='utf-8'))
+        # self.dialog.msgbox('congrats you are using a custom new page')
 
         #! second select which disk to use
         #! give user the options manual or automatic
