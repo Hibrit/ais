@@ -20,7 +20,7 @@ class PartitioningPage(DriverPage):
         for i in out.decode('utf-8').split('\n'):
             for j in black_list:
                 if j in i:
-                    continue
+                    break
             else:
                 message += i
                 message += '\n'
