@@ -27,7 +27,7 @@ locale.setlocale(locale.LC_ALL, '')
 class TUI:
     def __init__(self):
         self.dialog = Dialog(dialog='dialog')
-        self.set_background_title('my_tui')
+        self.dialog.set_background_title('my_tui')
 
     def run(self):
         if self.dialog.yesno('yes or no') == self.dialog.OK:
