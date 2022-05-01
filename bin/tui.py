@@ -5,7 +5,7 @@ try:
     print('success')
 except ModuleNotFoundError:
     from sys import executable
-    from subprocess import check_call, STDERR
+    from subprocess import check_call
     code = check_call(f'{executable} -m pip install pythondialog'.split())
 
     print(code)
