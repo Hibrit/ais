@@ -5,9 +5,10 @@ try:
     print('success')
 except ModuleNotFoundError:
     from sys import executable
-    from subprocess import call, STDERR
-    call(f'{executable} -m pip install pythondialog'.split())
-    print(STDERR)
+    from subprocess import check_call, STDERR
+    code = check_call(f'{executable} -m pip install pythondialog'.split())
+
+    print(code)
     # if STDERR == -2:
     #     call('pacman -Sy --noconfirm --needed  python-pip'.split())
     # call(f'{executable} -m pip install pythondialog'.split())
