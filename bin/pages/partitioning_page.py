@@ -18,7 +18,10 @@ class PartitioningPage(DriverPage):
         black_list = ['archiso']
 
         for i in out.decode('utf-8').split('\n'):
-            if not i in black_list:
+            for j in black_list:
+                if j in i:
+                    continue
+            else:
                 message += i
 
         self.dialog.msgbox(message)
