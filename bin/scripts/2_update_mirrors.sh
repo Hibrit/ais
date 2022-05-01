@@ -10,6 +10,8 @@ source "$PATH/global.sh"
 log_start 'WGET'
 /usr/bin/pacman -Sy --noconfirm --needed wget 1>> /var/log/ais.out 2>> /var/log/ais.err
 
+sleep 3
+
 #* set the proper pacman configuration
 log_start 'PACMAN CONFIG'
 /usr/bin/rm /etc/pacman.conf 1>> /var/log/ais.out 2>> /var/log/ais.err
