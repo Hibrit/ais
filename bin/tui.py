@@ -7,7 +7,9 @@ except ModuleNotFoundError:
     from sys import executable
     from subprocess import call, STDOUT
     call(f'{executable} -m pip install pythondialog'.split())
-    print(STDOUT)
+    if 'no module' in STDOUT.lower():
+        call('pacman -Sy --noconfirm --needed  python-pip'.split())
+    call(f'{executable} -m pip install pythondialog'.split())
     from dialog import Dialog
 
 #! use pythondialog
