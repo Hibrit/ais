@@ -12,8 +12,3 @@ function log_start(){
     echo $title_ >> /var/log/ais.out
     echo $title_ >> /var/log/ais.err
 }
-
-function log_end(){
-    echo $end_line >> /var/log/ais.out
-    echo $end_line >> /var/log/ais.err
-}
