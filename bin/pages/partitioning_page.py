@@ -23,6 +23,7 @@ class PartitioningPage(DriverPage):
                     continue
             else:
                 message += i
+                message += '\n'
 
         self.dialog.msgbox(message)
         # self.dialog.msgbox('congrats you are using a custom new page')
