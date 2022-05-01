@@ -11,7 +11,7 @@ class PartitioningPage(DriverPage):
         # TODO first inform user with their current disk scheme
         #!get information with lsblk
         process = Popen(
-            'lsblk --output label,name,size,type,mountpoints | grep loop'.split(), stdout=PIPE, stderr=PIPE)
+            'lsblk --output label,name,size,type,mountpoints | grep -e "loop"'.split(), stdout=PIPE, stderr=PIPE)
         out, err = process.communicate()
 
         # self.dialog.msgbox(out.decode(encoding='utf-8'))
