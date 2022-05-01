@@ -13,3 +13,5 @@
 #! most automatic version of it will set up my own things entirely
 #! this can be achieved with a config file and let anybody create their owns
 #! so arch linux installations can be shared this way .....
+
+#!!!!!! at this point I'm almost certain this script won't be needed 'couse I will use python to manage my other scripts

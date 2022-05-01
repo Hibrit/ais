@@ -17,5 +17,7 @@ sleep 3
 #* clone this repo inside /mnt/root
 git clone https://github.com/Hibrit/ais.git /mnt/ais
 
+#! at this part we should find a way to controll that connection to installed system
+#! in order to automate this
 #* chroot
 arch-chroot /mnt
