@@ -13,7 +13,8 @@ class PartitioningPage(DriverPage):
         out, err = process.communicate()
         print(out)
 
-        self.dialog.msgbox(out.decode(encoding='utf-8'), width=.8, height=.5)
+        self.dialog.msgbox(out.decode(encoding='utf-8'),
+                           width=None, height=None)
         # self.dialog.msgbox('congrats you are using a custom new page')
 
         #! second select which disk to use
