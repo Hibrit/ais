@@ -8,7 +8,7 @@ source "$PATH/global.sh"
 
 #* check for wget first
 log_start 'WGET'
-pacman -Sy --noconfirm --needed wget 1>> /var/log/ais.out 2>> /var/log/ais.err
+/bin/bash -c "pacman -Sy --noconfirm --needed wget 1>> /var/log/ais.out 2>> /var/log/ais.err"
 
 #* set the proper pacman configuration
 log_start 'PACMAN CONFIG'
