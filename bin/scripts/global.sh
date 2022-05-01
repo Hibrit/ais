@@ -3,7 +3,7 @@
 source /etc/bash.bashrc
 
 function title(){
-    title_="<------*> $* <*------> ($date)"
+    title_="<------*> $* <*------> ($(/usr/bin/date))"
     #'<------*> SETTING TIME <*------>'
 }
 
