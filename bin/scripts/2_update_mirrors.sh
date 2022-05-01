@@ -1,16 +1,14 @@
 #!/bin/bash
 
-PATH=$(dirname -- "$(readlink -f "${BASH_SOURCE}")")
-echo $PATH
+local_path=$(dirname -- "$(readlink -f "${BASH_SOURCE}")")
+echo $local_path
 
-source "$PATH/global.sh"
+source "$local_path/global.sh"
 
 
 #* check for wget first
-log_start 'ARCHLINUX-KEYRING'
-/usr/bin/pacman -Sy --noconfirm archlinux-keyring 1>> /var/log/ais.out 2>> /var/log/ais.err
 log_start 'WGET'
-/usr/bin/pacman -Sy --noconfirm --needed wget 1>> /var/log/ais.out 2>> /var/log/ais.err
+pacman -Sy --noconfirm --needed wget 1>> /var/log/ais.out 2>> /var/log/ais.err
 
 #* set the proper pacman configuration
 log_start 'PACMAN CONFIG'

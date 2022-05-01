@@ -1,11 +1,11 @@
 #!/bin/bash
 
-PATH=$(dirname -- "$(readlink -f "${BASH_SOURCE}")")
-echo $PATH
+local_path=$(dirname -- "$(readlink -f "${BASH_SOURCE}")")
+echo $local_path
 
-source "$PATH/global.sh"
+source "$local_path/global.sh"
 
 
 #? setting time
 log_start 'SET TIME'
-/usr/bin/timedatectl set-ntp true &> /dev/null
+timedatectl set-ntp true &> /dev/null
