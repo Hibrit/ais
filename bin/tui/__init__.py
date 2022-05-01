@@ -29,7 +29,7 @@ locale.setlocale(locale.LC_ALL, '')
 
 class TUI:
     def __init__(self, title='my_tui'):
-        self.dialog = Dialog(dialog='dialog')
+        self.dialog = Dialog(dialog='dialog', autowidgetsize=True)
         self.dialog.set_background_title(title)
 
     def default_page(self):
