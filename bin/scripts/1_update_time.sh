@@ -1,8 +1,6 @@
 #!/bin/bash
 
 local_path=$(dirname -- "$(readlink -f "${BASH_SOURCE}")")
-echo $local_path
-
 source "$local_path/global.sh"
 
 
