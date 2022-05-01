@@ -4,13 +4,18 @@
 clear
 
 #* setting time
-timedatectl set-ntp true
+timedatectl set-ntp true &> /dev/null
+
+#? first check for wget
+sudo pacman -Sy --noconfirm --needed wget
 
 #* set the proper pacman configuration
 rm /etc/pacman.conf
 wget --directory-prefix /etc/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/pacman/pacman.conf
 pacman -Syy
 
+
+#! for this create a interactial sequence and a automated one !
 #* listing partitions
 lsblk
 echo

@@ -1,0 +1,47 @@
+#!/usr/bin/python3
+from pages.main_page import MainPage
+
+# // we can still use dialog instead of curses through a connector api
+# // see pythondialog on pypi
+# * decided go with to creating my own connector class using pythondoialog through dialog package
+main_page = MainPage()
+main_page.update()
+
+#! we will run commands in background and track their stdouts stderrs stdins in order to control them (Threading)
+
+# ? remember to track error logs to a proper file
+# * it is somewhat done actually atleast for bash scripts side
+#! implament same kind of logging with better bash scripting implamentation
+
+#! at the end of the process give user to opportunity to save their installation for sharing!
+#! remember we have a system that we can share our installations with it
+
+
+#! at the very end we can try to create our own iso of arch linux with this installation process
+
+# import subprocess
+
+
+# subprocess.call('echo test'.split())
+# print(subprocess.STDIN)
+# subprocess.call('ls -l'.split())
+# print(subprocess.STDIN)
+
+
+# print(subprocess.PIPE)
+
+# process = subprocess.Popen(
+#     'echo test'.split(), stdout=subprocess.PIPE, stdin=subprocess.PIPE)
+
+# process.stdin.write(b'date > /tmp/test.txt')
+#output = process.stdout.read()
+
+# output, error = process.communicate()
+# print(output)
+# print(error)
+
+
+# process.stdin.write('date && zsh -c "date >> /tmp/test.txt"')
+# output, error = process.communicate()
+# print(output)
+# print(error)

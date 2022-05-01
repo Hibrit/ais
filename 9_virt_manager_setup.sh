@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#! after vs code script done or rejected that pop-up
+#! another pop-up will ask to install virt manager
+#! and take action accordingly
+
 #* clear screen
 clear
 

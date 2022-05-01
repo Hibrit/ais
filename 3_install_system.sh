@@ -3,6 +3,7 @@
 #* clear screen
 clear
 
+#! make this part interactive for sure :)
 #* variables that should be edited
 MACHINE_NAME='machinename'
 ROOT_PASSWORD='password'

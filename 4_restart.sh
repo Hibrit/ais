@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#! well make this automated ofcourse what is this shit XDXDXDXD
+
 #* clear screen
 clear
 

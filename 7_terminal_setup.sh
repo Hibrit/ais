@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#! after this setup computer will reboot automatically
+#! remember to reset the next boot up setup
+
 #* clear screen
 clear
 
