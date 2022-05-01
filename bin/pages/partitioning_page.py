@@ -8,8 +8,8 @@ class PartitioningPage(DriverPage):
         super().__init__(title='Partitioning Page')
 
     def update(self):
-        # TODO first inform user with their current disk scheme
-        #!get information with lsblk
+        # * first inform user with their current disk scheme
+        # *get information with lsblk
         process = Popen(
             'lsblk --output label,name,size,type,mountpoints'.split(), stdout=PIPE, stderr=PIPE)
         out, err = process.communicate()
