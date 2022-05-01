@@ -11,4 +11,4 @@ class MainPage(TUI):
                                               ('(q)', 'quit')])
 
         if code == self.dialog.OK:
-            print(self.tag)
+            print(tag)
