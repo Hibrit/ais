@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function title(){
-    title_="<------*> $* <*------> ($(date +%s))"
+    title_="<------*> $* <*------> ($date)"
     #'<------*> SETTING TIME <*------>'
 }
 
