@@ -1,11 +1,9 @@
 #!/bin/bash
 
 function title(){
-    title_="<------*> $* <*------>"
+    title_="<------*> $* <*------> ($(date +%s))"
     #'<------*> SETTING TIME <*------>'
 }
-
-end_line='<------------------------->'
 
 function log_start(){
     title ${1}
