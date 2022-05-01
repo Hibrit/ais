@@ -9,7 +9,8 @@ class PartitioningPage(DriverPage):
     def update(self):
         # TODO first inform user with their current disk scheme
         #!get information with lsblk
-        process = Popen('lsblk -f'.split(), stdout=PIPE, stderr=PIPE)
+        process = Popen(
+            'lsblk -f | grep -v "loop" | grep -v "sr"'.split(), stdout=PIPE, stderr=PIPE)
         out, err = process.communicate()
         print(out)
 
