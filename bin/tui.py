@@ -6,12 +6,15 @@
 import locale
 from os.path import dirname, realpath, join
 from sys import executable
-from subprocess import call, check_call, CalledProcessError
+from subprocess import check_call, CalledProcessError, Popen
 
 PATH = dirname(realpath(__file__))
-call(join(PATH, 'scripts', '1_update_time.sh'))
-call(join(PATH, 'scripts', '2_update_mirrors.sh'))
-call(join(PATH, 'scripts', '3_check_dialog.sh'))
+for script in ['1_update_time.sh', '2_update_mirrors.sh', '3_check_dialog.sh']:
+    p = Popen(join(PATH, 'scripts', script))
+    p.wait()
+# call(join(PATH, 'scripts', '1_update_time.sh'))
+# call(join(PATH, 'scripts', '2_update_mirrors.sh'))
+# call(join(PATH, 'scripts', '3_check_dialog.sh'))
 
 
 try:
