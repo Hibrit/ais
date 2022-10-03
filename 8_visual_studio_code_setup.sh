@@ -3,21 +3,9 @@
 #! after next login depending a pop up will appear 
 #! a notification asking to install vs code if wanted this script will run
 
-#* clear screen
-clear
-
-#* install visual studio code
-yay -Sy --needed --noconfirm visual-studio-code-bin
-
-
-#* open and close visual studio code once
-code /home/$USER/
-sleep 3
-killall code
-while pgrep -u $UID -x code >/dev/null; do sleep 1; done
-
 
 #* install custom extensions
+#! I might change some of those extensions
 code --install-extension 2gua.rainbow-brackets
 code --install-extension aaron-bond.better-comments
 code --install-extension christian-kohler.path-intellisense

@@ -1,13 +1,16 @@
 #!/bin/bash
 
-#! this will run after an interactive choice asking if we want to setup a server
-
 #* clear screen
 clear
 
 #* install needed packages
-sudo pacman -Sy --needed --noconfirm xorg lightdm lightdm-webkit2-greeter lightdm-webkit-theme-litarvan numlockx cinnamon alacritty papirus-icon-theme ttf-input ttf-ubuntu-font-family ttf-fira-code neofetch htop gnome-keyring mpv youtube-dl eog mupdf
-yay -Sy --needed --noconfirm mint-themes papirus-folders bibata-cursor-theme-bin nerd-fonts-meslo google-chrome brave-bin mailspring
+#! changes
+#! >> instead of lightdm-webkit2-greeter + ligtdm-webkit-theme-litarvan use lightdm-mini-greeter alone
+#! >> remember to make its configuration or it will not work
+
+sudo pacman -Sy --needed --noconfirm xorg lightdm lightdm-mini-greeter cinnamon alacritty papirus-icon-theme ttf-input ttf-ubuntu-font-family ttf-fira-code neofetch htop gnome-keyring mpv youtube-dl eog mupdf firefox qalculate-gtk
+
+yay -Sy --needed --noconfirm mint-themes papirus-folders bibata-cursor-theme-bin nerd-fonts-meslo mailspring ookla-speedtest-bin
 
 #* change papirus folders color theme to yaru
 papirus-folders -C yaru -t Papirus-Dark
@@ -20,9 +23,14 @@ else
 fi
 
 #* replace lightdm config with the proper one
-sudo rm /etc/lightdm/lightdm.conf /etc/lightdm/lightdm-webkit2-greeter.conf
-sudo wget --directory-prefix /etc/lightdm/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/lightdm/lightdm.conf
-sudo wget --directory-prefix /etc/lightdm/ https://raw.githubusercontent.com/Hibrit/archlinuxsettings/master/lightdm/lightdm-webkit2-greeter.conf
+sudo rm /etc/lightdm/lightdm.conf /etc/lightdm/lightdm-mini-greeter.conf
+sudo wget --directory-prefix /etc/lightdm/ https://github.com/Hibrit/archlinuxsettings/raw/master/lightdm/lightdm-mini-greeter.conf
+sudo wget --directory-prefix /etc/lightdm/ https://github.com/Hibrit/archlinuxsettings/raw/master/lightdm/lightdm.conf
+
+#! berofe enabling lightdm.service please force user to change its username in lightdm-mini-greeter.conf
+echo 'please change your username in configuration'
+sleep 3
+sudo vim /etc/lightdm/lightdm-mini-greeter.conf
 
 #* enable and start lightdm
 sudo systemctl enable --now lightdm.service

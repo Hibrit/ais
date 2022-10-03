@@ -37,6 +37,10 @@ pacman -S --needed --noconfirm grub efibootmgr networkmanager network-manager-ap
 #! install grub !!!THIS IS FOR UEFI USAGE ONLY!!!
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 
+#! if installing to a legacy system use this installation type instead
+#! remember to change /dev/sdX path to drive
+# grub-install --target=i386-pc /dev/sdX
+
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
