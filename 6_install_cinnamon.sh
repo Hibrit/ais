@@ -8,9 +8,9 @@ clear
 #! >> instead of lightdm-webkit2-greeter + ligtdm-webkit-theme-litarvan use lightdm-mini-greeter alone
 #! >> remember to make its configuration or it will not work
 
-sudo pacman -Sy --needed --noconfirm xorg lightdm lightdm-mini-greeter cinnamon alacritty papirus-icon-theme ttf-input ttf-ubuntu-font-family ttf-fira-code neofetch htop gnome-keyring mpv youtube-dl eog mupdf firefox qalculate-gtk
+sudo pacman -Sy --needed --noconfirm xorg lightdm cinnamon alacritty papirus-icon-theme ttf-input ttf-ubuntu-font-family ttf-fira-code neofetch htop gnome-keyring mpv youtube-dl eog mupdf firefox qalculate-gtk
 
-yay -Sy --needed --noconfirm mint-themes papirus-folders bibata-cursor-theme-bin nerd-fonts-meslo mailspring ookla-speedtest-bin
+yay -Sy --needed --noconfirm lightdm-mini-greeter mint-themes papirus-folders bibata-cursor-theme-bin nerd-fonts-meslo mailspring ookla-speedtest-bin
 
 #* change papirus folders color theme to yaru
 papirus-folders -C yaru -t Papirus-Dark
