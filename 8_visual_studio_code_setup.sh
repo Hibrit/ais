@@ -21,7 +21,7 @@ code --install-extension ms-toolsai.jupyter-keymap
 code --install-extension ms-toolsai.jupyter-renderers
 code --install-extension oderwat.indent-rainbow
 code --install-extension PKief.material-icon-theme
-
+code --install-extension GitHub.copilot
 
 #* set custom keybindings and settings
 wget --directory-prefix /home/$USER/.config/Code/User/ https://github.com/Hibrit/archlinuxsettings/raw/master/vscode/keybindings.json
